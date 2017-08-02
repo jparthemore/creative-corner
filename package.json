@@ -28,15 +28,17 @@
     "webpack-dev-server": "^2.5.1"
   },
   "dependencies": {
-    "angular": "^1.6.5"
+    "angular": "^1.6.5",
+    "bootstrap": "^3.3.7",
+    "font-awesome": "^4.7.0"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/justin1dennison/darkcaster-client.git"
+    "url": "git+https://github.com/jparthemore/creative-corner.git"
   },
   "bugs": {
-    "url": "https://github.com/justin1dennison/darkcaster-client/issues"
+    "url": "https://github.com/jparthemore/creative-corner/issues"
   },
-  "homepage": "https://github.com/justin1dennison/darkcaster-client#readme",
+  "homepage": "https://github.com/jparthemore/creative-corner#readme",
   "description": ""
 }

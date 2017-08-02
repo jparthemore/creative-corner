@@ -69,7 +69,10 @@ module.exports = {
 				}
 
 			},
-
+			{
+				test: /\.(eot|woff|woff2|ttf)$/,
+				loader: 'file-loader',
+			},
 			{
 				test: /\.html$/,
 				loader:'html-loader',
