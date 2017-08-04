@@ -1,3 +1,4 @@
+require('./nav-page.css');
 function NavbarController(){
    this.msg = 'hi';
 }
