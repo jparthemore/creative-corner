@@ -3,7 +3,7 @@
 const angular = require('angular');
 require('bootstrap/dist/css/bootstrap.css');
 require('font-awesome/css/font-awesome.css');
-require('./normalize.css');
+// require('./normalize.css');
 
 const NavbarComponent = require('./components/nav-bar');
 const HomePageComponent = require('./components/home-page');
