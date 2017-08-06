@@ -1,5 +1,7 @@
 node_modules
 dist
+src/images/store-small.png
+src/images/center-store.png
 # Logs
 logs
 *.log
