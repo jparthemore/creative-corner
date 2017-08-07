@@ -12,6 +12,9 @@ const NavbarComponent = require('./components/nav-bar');
 const HomePageComponent = require('./components/home-page');
 const ContactPageComponent = require('./components/contact-page');
 
+//services
+const ProductService = require('./services/product.service');
+
 //configuration
 const RoutesConfig = require('./config/routes');
 
@@ -20,4 +23,5 @@ angular.module('creative-corner',[ ngRoute ])
        .config(RoutesConfig)
        .component('homePage',HomePageComponent)
        .component('navBar',NavbarComponent)
-       .component('contactPage',ContactPageComponent);
+       .component('contactPage',ContactPageComponent)
+       .factory('products', ProductService);

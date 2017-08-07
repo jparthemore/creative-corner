@@ -1,9 +1,16 @@
 /*jshint esversion: 6*/
 
-function HomePageController(){
-  this.message = "this is home view";
+function HomePageController(ProductService){
+  //this.message = "this is home view";
+  //ProductService.getProducts();
+  ProductService.getProducts()
+                .then(resp=> this.prods = resp)
+                .catch(err=>console.error(err));
+  // ProductService.getProductsByCategory('animal stamps')
+  //               .then(resp=> this.prods = resp)
+  //               .catch(err=>console.error(err));
 }
 
-HomePageController.$inject = [];
+HomePageController.$inject = ['products'];
 
 module.exports = HomePageController;
