@@ -5,7 +5,10 @@ const template = require('./home-page.html');
 
 const component = {
   controller,
-  template
+  template,
+  bindings:{
+    prods: '<'
+  }
 };
 
 module.exports = component;

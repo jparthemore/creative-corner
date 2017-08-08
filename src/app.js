@@ -5,6 +5,7 @@ const ngRoute = require('angular-route');
 //require('bootstrap/dist/css/bootstrap.css');
 require('./grid.css');
 require('font-awesome/css/font-awesome.css');
+require('./fonts/DancingScript-Regular.ttf');
 // require('./normalize.css');
 
 //components
