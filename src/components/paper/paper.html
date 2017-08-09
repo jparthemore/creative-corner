@@ -1,0 +1,30 @@
+<section class="paper-page">
+  <header>
+    <img class="header-image" src="../../images/store-small.png" alt="">
+    <h1>Linda's Creative Corner</h1>
+  </header>
+  <main>
+    <tr>
+        <td>
+          <p class="page-title">Paper Supplies</p>
+        </td>
+    </tr>
+    <label for="p-input">Paper Types: </label>
+    <select name="p-input" id="p-input" class='input-types'
+      ng-model='$ctrl.paperinput'
+      ng-change="$ctrl.onChange()">
+      <option ng-repeat="x in $ctrl.paperinputtypes">{{x}}</option>
+    </select>
+    <div ng-repeat='prod in $ctrl.prods'>
+      <p>{{ prod.name }}</p>
+      <p>{{ prod.productID}}</p>
+      <p>{{prod.imageURL}}</p>
+      <!-- <img ng-src="../images/{{ prod.imageURL }}" /> -->
+      <img ng-src="images/{{ prod.imageURL }}" />
+      <!-- <img ng-src="{{ prod.imageURL }}" /> -->
+      <!-- <img src="../../images/PrintedPaper/all-things-are-possible-pp.png" alt=""/> -->
+      <p>{{ prod.prices.unitPrice}}</p>
+    </div>
+
+  </main>
+</section>

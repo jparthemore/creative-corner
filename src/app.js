@@ -12,6 +12,7 @@ require('./fonts/DancingScript-Regular.ttf');
 const NavbarComponent = require('./components/nav-bar');
 const HomePageComponent = require('./components/home-page');
 const ContactPageComponent = require('./components/contact-page');
+const PaperComponent = require('./components/paper');
 
 //services
 const ProductService = require('./services/product.service');
@@ -25,4 +26,5 @@ angular.module('creative-corner',[ ngRoute ])
        .component('homePage',HomePageComponent)
        .component('navBar',NavbarComponent)
        .component('contactPage',ContactPageComponent)
+       .component('paper',PaperComponent)
        .factory('products', ProductService);

@@ -1,8 +1,6 @@
 /*jshint esversion: 6*/
 
-function ContactPageController(){
-  this.message = "this is home view";
-}
+function ContactPageController(){}
 
 ContactPageController.$inject = [];
 

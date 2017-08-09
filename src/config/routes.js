@@ -12,6 +12,9 @@ function RouterConfig($routeProvider){
     .when('/contact',{
       template: '<contact-page></contact-page>'
     })
+    .when('/paper',{
+      template: '<paper></paper>'
+    })
     .otherwise({
       redirectTo: '/'
     });

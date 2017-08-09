@@ -18,6 +18,7 @@ function ProductService($http){
      //console.log('getting all the products for a given category');
      const url = `${productUrl}/category/${category}`;
      return $http.get(url)
+                //.then(response=>console.log(response.data.products))
                  .then(response=>response.data.products);
    }
 }
