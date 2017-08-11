@@ -3,16 +3,12 @@ var chosenpapertype ='';
 function PaperController(ProductService, $location){
   this.paperinputtypes =['Printed Paper','Cardstock Chalky Stripes'];
   this.paperinput = chosenpapertype||this.paperinputtypes[0];
-  
+
   this.onChange = function onChange(){
     chosenpapertype = this.paperinput;
-    //const url = `/paper/${chosenpapertype}`;
     const category = chosenpapertype;
     ProductService.getProductsByCategory(category)
-                  //.then(() => $location.path('/Printed Paper'))
-                  .then( function setPath(){
-                    $location.path(`/paper/${category}`);
-          				})
+                  .then(() => $location.path(`/paper/${category}`))
                   .catch(() => console.error('oops'));
   };
 
