@@ -1,19 +1,23 @@
 /*jshint esversion: 6*/
-
-function PaperController(ProductService){
+var chosenpapertype ='';
+function PaperController(ProductService, $location){
   this.paperinputtypes =['Printed Paper','Cardstock Chalky Stripes'];
-  this.paperinput = this.paperinputtypes[0];
-  this.chosenpapertype = 'Printed Paper';
-
+  this.paperinput = chosenpapertype||this.paperinputtypes[0];
+  
   this.onChange = function onChange(){
-    this.chosenpapertype = this.paperinput;
+    chosenpapertype = this.paperinput;
+    //const url = `/paper/${chosenpapertype}`;
+    const category = chosenpapertype;
+    ProductService.getProductsByCategory(category)
+                  //.then(() => $location.path('/Printed Paper'))
+                  .then( function setPath(){
+                    $location.path(`/paper/${category}`);
+          				})
+                  .catch(() => console.error('oops'));
   };
 
-  ProductService.getProductsByCategory(this.chosenpapertype)
-                .then(resp=> this.prods = resp)
-                .catch(err=>console.error(err));
 }
 
-PaperController.$inject = ['products'];
+PaperController.$inject = ['products','$location'];
 
 module.exports = PaperController;

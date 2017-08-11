@@ -1,7 +1,7 @@
 /*jshint esversion: 6*/
 
-function HomePageController(ProductService){}
+function HomePageController(){}
 
-HomePageController.$inject = ['products'];
+HomePageController.$inject = [];
 
 module.exports = HomePageController;
