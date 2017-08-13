@@ -1,12 +1,12 @@
 /*jshint esversion: 6*/
-//require('./app.css');
+require('./app.css');
 const angular = require('angular');
 const ngRoute = require('angular-route');
 //require('bootstrap/dist/css/bootstrap.css');
 require('./grid.css');
 require('font-awesome/css/font-awesome.css');
 require('./fonts/DancingScript-Regular.ttf');
-// require('./normalize.css');
+require('./normalize.css');
 
 //components
 const NavbarComponent = require('./components/nav-bar');

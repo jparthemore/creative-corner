@@ -1,4 +1,5 @@
 /*jshint esversion: 6*/
+require('./nav-page.css');
 const navbarController = require('./nav-bar.controller');
 const htmlTemplate = require('./nav-bar.html');
 

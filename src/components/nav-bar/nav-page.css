@@ -5,9 +5,6 @@ nav ul {
   font-size: 0px;
   text-align: right;
   border-bottom: 1px solid #8e827e;
-  /*background-color: #bc9c90;*/
-  /*background-color: #b59a92;*/
-  /*background-color: rgba(119, 84, 71, 0.5);*/
 }
 
 nav ul li {
@@ -15,16 +12,4 @@ nav ul li {
   font-size: 16px;
   margin: 0 16px;
   padding: 16px 0 16px 0;
-}
-
-a,
-a:visited,
-a:focus{
-  text-decoration: none;
-  color: black;
-  transition: all 0.25s ease-in;
-}
-a:hover{
-  text-decoration: none;
-  color: #0065F1;
 }

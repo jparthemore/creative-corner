@@ -1,7 +1,4 @@
-require('./nav-page.css');
-function NavbarController(){
-   this.msg = 'hi';
-}
+function NavbarController(){}
 
 NavbarController.$inject = [];
 

@@ -9,7 +9,7 @@ function PaperController(ProductService, $location){
     const category = chosenpapertype;
     ProductService.getProductsByCategory(category)
                   .then(() => $location.path(`/paper/${category}`))
-                  .catch(() => console.error('oops'));
+                  .catch(() => console.error('path not found'));
   };
 
 }
