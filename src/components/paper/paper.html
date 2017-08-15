@@ -22,7 +22,7 @@
   <main>
     <div class="container">
       <div class="item-row">
-        <div ng-repeat='prod in $ctrl.prods' class="col-md-4">
+        <div ng-repeat='prod in $ctrl.prods' class="col-md-3">
           <div class="item-card">
             <img ng-src="images/{{ prod.imageURL }}" />
             <h2 class="item-title">{{  (prod.productID ) ? (prod.productID +' - '+prod.name)
