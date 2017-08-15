@@ -20,6 +20,16 @@
     </div>
   </header>
   <main>
+    <div class="category-description" ng-switch='$ctrl.paperinput'>
+      <div ng-switch-when="Printed Paper">
+        <p>12" X 12" Printed Paper</p>
+        <p>$.64 each</p>
+      </div>
+      <div ng-switch-when="Cardstock Chalky Stripes">
+        <p>65 lb  8 1/2" x 11" Cardstock Chalky Stripes</p>
+        <p>$.59 each</p>
+      </div>
+    </div>
     <div class="container">
       <div class="item-row">
         <div ng-repeat='prod in $ctrl.prods' class="col-md-3">
@@ -30,9 +40,16 @@
               }}</h2>
             <p class= "item-info">
               <label>quantity:</label>
-              <input type="number" value="0"/>
-              $ {{prod.prices.unitPrice}}/EA
+              <input type="number" value="1"/>
+              $ {{prod.prices.unitPrice}}
             </p>
+            <!-- <p class= "item-info">
+              <label>quantity:</label>
+              <input type="number" value="1"
+                ng-model = '$ctrl.total'
+                ng-change='$ctrl.updateTotal()'/>
+              $ {{prod.prices.unitPrice}}
+            </p> -->
             <ul class="item-card-footer">
               <li>
                 <button class="item-card-btn" ng-click='$ctrl.addToCart()'>Add To Cart</button>
