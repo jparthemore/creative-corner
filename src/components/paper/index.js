@@ -1,5 +1,5 @@
 /*jshint esversion: 6*/
-//require('./paper.css');
+require('./paper.css');
 const controller = require('./paper.controller');
 const template = require('./paper.html');
 

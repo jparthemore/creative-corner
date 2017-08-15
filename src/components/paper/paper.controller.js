@@ -3,6 +3,7 @@ var chosenpapertype ='';
 function PaperController(ProductService, $location){
   this.paperinputtypes =['Printed Paper','Cardstock Chalky Stripes'];
   this.paperinput = chosenpapertype||this.paperinputtypes[0];
+  this.addToCart = addToCart;
 
   this.onChange = function onChange(){
     chosenpapertype = this.paperinput;
@@ -11,6 +12,12 @@ function PaperController(ProductService, $location){
                   .then(() => $location.path(`/paper/${category}`))
                   .catch(() => console.error('path not found'));
   };
+
+
+
+  function addToCart(){
+    console.log('adding to cart');
+  }
 
 }
 

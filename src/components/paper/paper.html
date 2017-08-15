@@ -1,29 +1,46 @@
 <section class="paper-page">
   <header>
-    <img class="header-image" src="../../images/store-small.png" alt="">
-    <h1>Linda's Creative Corner</h1>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1>
+            Paper Supplies
+          </h1>
+          <img class="header-image" src="../../images/paper-category2.png" alt="">
+          <div class="papertype-selection">
+            <label for="p-input">Paper Types: </label>
+            <select name="p-input" id="p-input" class='input-types'
+              ng-model='$ctrl.paperinput'
+              ng-change="$ctrl.onChange()">
+              <option ng-repeat="x in $ctrl.paperinputtypes">{{x}}</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
   </header>
   <main>
-    <tr>
-        <td>
-          <p class="page-title">Paper Supplies</p>
-        </td>
-    </tr>
-    <label for="p-input">Paper Types: </label>
-    <select name="p-input" id="p-input" class='input-types'
-      ng-model='$ctrl.paperinput'
-      ng-change="$ctrl.onChange()">
-      <option ng-repeat="x in $ctrl.paperinputtypes">{{x}}</option>
-    </select>
-    <div ng-repeat='prod in $ctrl.prods'>
-      <p>{{ prod.name }}</p>
-      <p>{{ prod.productID}}</p>
-      <p>{{prod.imageURL}}</p>
-      <!-- <img ng-src="../images/{{ prod.imageURL }}" /> -->
-      <img ng-src="images/{{ prod.imageURL }}" />
-      <!-- <img ng-src="{{ prod.imageURL }}" /> -->
-      <!-- <img src="../../images/PrintedPaper/all-things-are-possible-pp.png" alt=""/> -->
-      <p>{{ prod.prices.unitPrice}}</p>
+    <div class="container">
+      <div class="item-row">
+        <div ng-repeat='prod in $ctrl.prods' class="col-md-4">
+          <div class="item-card">
+            <img ng-src="images/{{ prod.imageURL }}" />
+            <h2 class="item-title">{{  (prod.productID ) ? (prod.productID +' - '+prod.name)
+                : prod.name
+              }}</h2>
+            <p class= "item-info">
+              <label>quantity:</label>
+              <input type="number" value="0"/>
+              $ {{prod.prices.unitPrice}}/EA
+            </p>
+            <ul class="item-card-footer">
+              <li>
+                <button class="item-card-btn" ng-click='$ctrl.addToCart()'>Add To Cart</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
   </main>
 </section>
