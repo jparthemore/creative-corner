@@ -10,6 +10,13 @@ nav ul {
 nav ul li {
   display: inline-block;
   font-size: 16px;
+  font-weight: 500;
   margin: 0 16px;
   padding: 16px 0 16px 0;
+}
+
+nav ul li.nav-title {
+  font-size: 20px;
+  margin-right: 150px;
+  color: #3a053a;
 }
