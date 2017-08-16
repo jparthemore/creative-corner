@@ -19,6 +19,12 @@ function RouterConfig($routeProvider){
         categoryData: CategoryDataResolve
       }
     })
+    .when('/stamps/:category',{
+      template: '<stamps prods="$resolve.categoryData"></stamps>',
+      resolve: {
+        categoryData: CategoryDataResolve
+      }
+    })
     .otherwise({
       redirectTo: '/'
     });

@@ -1,0 +1,51 @@
+<section class="stamp-page">
+  <header>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1>
+            Mounted & Unmounted Stamps
+          </h1>
+          <img class="header-image" src="../../images/stamps-category1-a.png" alt="">
+          <div class="subcategory-selection">
+            <label for="p-input">Stamp Types: </label>
+            <select name="p-input" id="p-input" class='input-types'
+              ng-model='$ctrl.stampinput'
+              ng-change="$ctrl.onChange()">
+              <option ng-repeat="x in $ctrl.stampinputtypes">{{x}}</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div class="category-description" ng-switch='$ctrl.stampinput'>
+      <div ng-switch-when="Nature & Scenery">
+        <p>Mounted Stamps</p>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row item-row row-eq-height">
+        <div ng-repeat='prod in $ctrl.prods' class="col-md-4">
+          <div class="item-card">
+            <img ng-src="images/{{ prod.imageURL }}" />
+            <h2 class="item-title">{{  (prod.productID ) ? (prod.productID +' - '+prod.name)
+                : prod.name
+              }}</h2>
+            <p class= "item-info">
+              <label>quantity: </label>
+              <input type="number"/>
+                {{prod.prices.unitPrice | currency}}/ea
+            </p>
+            <ul class="item-card-footer">
+              <li>
+                <button class="item-card-btn" ng-click='$ctrl.addToCart()'>Add To Cart</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</section>

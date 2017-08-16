@@ -1,6 +1,6 @@
 /*jshint esversion: 6*/
-const controller = require('./home-page.controller');
-const template = require('./home-page.html');
+const controller = require('./stamps.controller');
+const template = require('./stamps.html');
 
 const component = {
   controller,
