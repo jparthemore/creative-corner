@@ -189,3 +189,23 @@ input[type="number"]  {
   border-radius: 5px;
   transition: all .25s ease-in;
 }
+/*-----------------------
+contact page
+--------------------------*/
+.contact-subheader{
+  font-family: 'Open Sans',sans-serif;
+  font-size: 24px;
+}
+.contact-detail{
+  font-size: 24px;
+}
+.contact-page table{
+  width: 600px;
+  border: 0;
+  padding: 0;
+  margin-bottom: 50px;
+}
+
+.contact-page td{
+  padding-left: 50px;
+}
